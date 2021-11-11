@@ -7,7 +7,7 @@ const cors = require('cors');
 // route imports
 const authenticationRoutes = require('./routes/authenticationRoutes');
 
-const { PORT } = process.env || 4000 
+const { PORT } = process.env
 const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 
 
@@ -17,7 +17,7 @@ const app = express();
 // load middleware
 const corsOptions = {
     origin: '*',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+    optionsSuccessStatus: 200 
 }
 
 app.use(cors(corsOptions))
